@@ -1,9 +1,9 @@
 function generateBoard() {
   const phrases = [
-    "Snow", "Mistletoe", "Dinosaur", "Phrase 4", "Phrase 5",
-    "Phrase 6", "Phrase 7", "Phrase 8", "Phrase 9", "Phrase 10",
-    "Phrase 11", "Phrase 12", "Phrase 13", "Phrase 14", "Phrase 15",
-    "Phrase 16", "Phrase 17", "Phrase 18", "Phrase 19", "Phrase 20",
+    "Lead has christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
+    "Small town setting", "Town with christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
+    "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
+    "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "", "Phrase 20",
     "Phrase 21", "Phrase 22", "Phrase 23", "Phrase 24", "Phrase 25", 
     "Phrase 26", "Phrase 27", "Phrase 28", "Phrase 29", "Phrase 30"
   ]; 
