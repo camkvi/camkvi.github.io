@@ -22,6 +22,7 @@ const norwegianPhrases = [
 ];
 
 
+
   const card = document.getElementById("bingoCard");
   const shuffledPhrases = shuffleArray(currentPhrases);
 
@@ -52,9 +53,9 @@ const norwegianPhrases = [
   document.getElementById("myHeader").style.fontSize = "2em"; // Reset font size
   document.getElementById("generateButton").style.position = "relative";
   document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
-  document.getElementById("languageButton").style.position = "relative"; // Add this line
+  // document.getElementById("languageButton").style.position = "relative"; // Add this line
 }
-
+/*
 function toggleLanguage() {
   isEnglish = !isEnglish; // Toggle the language flag
   currentPhrases = isEnglish ? englishPhrases : norwegianPhrases;
@@ -67,7 +68,7 @@ function toggleLanguage() {
 
   generateBoard(); // Regenerate the board
 }
-
+*/
 function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
