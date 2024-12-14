@@ -21,18 +21,17 @@ button { /* Styles for all buttons */
 
 
 #myHeader { /* Styles for this specific header*/
-    font-size: 4em;
+    font-size: 3em;
     color: darkred;
-    font: Lobster;
     -webkit-text-stroke: 1px white; /* For compatibility with older browsers */
     text-stroke: 1px white; /* Add text outline */
 }
 
 
 #generateButton { /* Styles for this specific button*/
-    font-size: 3em;
-    background-color: gold;
-    color: darkred;
+    font-size: 2em;
+    background-color: green;
+    color: white;
     border: none; /* Remove any existing border */
     outline: none; /* Remove any existing outline */
 }
@@ -54,7 +53,7 @@ button { /* Styles for all buttons */
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
-  color: white;
+  color: white
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
 }
