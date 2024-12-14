@@ -34,6 +34,10 @@ function generateBoard() {
       });
     }
   }
+  // After generating the board, move the header and button to the top center:
+  document.getElementById("myHeader").style.position = "relative";
+  document.getElementById("generateButton").style.position = "relative"; 
+
 }
 
 function shuffleArray(array) {

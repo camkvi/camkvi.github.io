@@ -1,3 +1,11 @@
+body { /* Puts the header and button in the center, move then with generateBoard() after the board has been generated */
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh; 
+}
+
 h1 { /* Styles for all h1 headers */
   text-align: center;  /* Center the text */
   font-family: sans-serif; /* Change the font to sans-serif */
@@ -12,13 +20,13 @@ button { /* Styles for all buttons */
 
 
 #myHeader { /* Styles for this specific header*/
-    font-size: 24px;
+    font-size: 30px;
     color: crimson;
 }
 
 
 #generateButton { /* Styles for this specific button*/
-    font-size: 16px;
+    font-size: 20px;
     background-color: green;
     color: white;
 }
@@ -34,7 +42,7 @@ button { /* Styles for all buttons */
 #bingoCard td {
   width: 100px;
   height: 100px;
-  border: 1px green;
+  border: 2px green;
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
@@ -44,6 +52,7 @@ button { /* Styles for all buttons */
 
 #bingoCard td.selected {
   background-color: crimson;
+  color: white;
 }
 /*
 #bingoCard td:nth-child(3):nth-child(3) { /* Center square */
