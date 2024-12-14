@@ -1,13 +1,28 @@
-h1 { /* Styles for the h1 header */
+h1 { /* Styles for all h1 headers */
   text-align: center;  /* Center the text */
   font-family: sans-serif; /* Change the font to sans-serif */
 }
 
-button { /* Styles for the button */
+
+button { /* Styles for all buttons */
   display: block; /* Make the button a block-level element */
   margin: 0 auto; /* Center the button horizontally */
   font-family: sans-serif; /* Change the font to sans-serif */
 }
+
+
+#myHeader { /* Styles for this specific header*/
+    font-size: 24px;
+    color: crimson;
+}
+
+
+#generateButton { /* Styles for this specific button*/
+    font-size: 16px;
+    background-color: green;
+    color: white;
+}
+
 
 #bingoCard {
   width: 500px;
