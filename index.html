@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Bingo Card Generator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Bingo Card Generator</h1>
+
+  <textarea id="phraseList" placeholder="Enter phrases, one per line"></textarea>
+  <button onclick="generateBoard()">Generate Board</button>
+
+  <table id="bingoCard"></table>
+
+  <script src="script.js"></script>
 </body>
 </html>
