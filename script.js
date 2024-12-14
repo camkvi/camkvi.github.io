@@ -1,3 +1,6 @@
+let currentPhrases = englishPhrases; // Start with English phrases
+let isEnglish = true; // Flag to track the current language
+
 function generateBoard() {
 
 const englishPhrases = [
@@ -17,8 +20,6 @@ const norwegianPhrases = [
   "Secret Santa", "Julaften-frist", "Snødd inne", "Skøytescene", "Stygg julegenser-konkurranse",
   "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julemann-opptreden", "Magisk julepynt"
 ];
-
-let currentPhrases = englishPhrases; // Start with English phrases
 
 
   const card = document.getElementById("bingoCard");
@@ -52,6 +53,19 @@ let currentPhrases = englishPhrases; // Start with English phrases
   document.getElementById("generateButton").style.position = "relative"; 
   document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
 
+}
+
+function toggleLanguage() {
+  isEnglish = !isEnglish; // Toggle the language flag
+  currentPhrases = isEnglish ? englishPhrases : norwegianPhrases;
+
+  // Update button text and highlight
+  const languageButton = document.getElementById("languageButton");
+  languageButton.textContent = isEnglish ? "ENG / NO" : "NO / ENG"; 
+  languageButton.classList.toggle("english", isEnglish);
+  languageButton.classList.toggle("norwegian", !isEnglish);
+
+  generateBoard(); // Regenerate the board
 }
 
 function shuffleArray(array) {
