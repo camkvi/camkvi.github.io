@@ -65,7 +65,7 @@ function toggleLanguage() {
   languageButton.classList.toggle("english", isEnglish);
   languageButton.classList.toggle("norwegian", !isEnglish);
 
-  generateBoard(); // Regenerate the board
+  //generateBoard(); // Regenerate the board
 }
 
 function shuffleArray(array) {
