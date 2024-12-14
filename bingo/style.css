@@ -22,7 +22,8 @@ button { /* Styles for all buttons */
 
 #myHeader { /* Styles for this specific header*/
     font-size: 3em;
-    color: crimson;
+    color: dark red;
+    text-shadow: 2px 2px 4px white; /* Add text shadow */
 }
 
 
@@ -45,21 +46,23 @@ button { /* Styles for all buttons */
 #bingoCard td {
   width: 20%;
   height: 20%;
-  border: 1px solid green;
+  border: 1px solid gold;
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
+  color: white
+    text-shadow: 2px 2px 4px black; /* Add text shadow */
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
 }
 
 #bingoCard td.selected {
-  background-color: crimson;
+  background-color: dark red;
   color: white;
 }
 
 #bingoCard tr:nth-child(3) td:nth-child(3) { /* Center square */
-  background-color: crimson;
+  background-color: dark red;
   cursor: default;
 }
 
