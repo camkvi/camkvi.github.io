@@ -5,6 +5,13 @@ body {
   min-height: 100vh; 
 }
 
+#container {
+  background-image: url("starrySky.jpg"); 
+  background-size: cover; /* Or 'contain', depending on how you want it to fit */
+  background-repeat: repeat; 
+  /* ... other styles for your container ... */
+}
+
 h1 { /* Styles for all h1 headers */
   text-align: center;  /* Center the text */
   font-family: sans-serif; /* Change the font to sans-serif */
