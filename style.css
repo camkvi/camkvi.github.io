@@ -9,11 +9,10 @@
   width: 100px;
   height: 100px;
   border: 1px solid black;
-  text-align: center;
+  text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
   cursor: pointer;
-  text-align: center; /* Center text horizontally */
   font-family: sans-serif; /* Use a sans-serif font */
 }
 
@@ -25,4 +24,3 @@
   background-color: lightgray;
   cursor: default;
 }
-
