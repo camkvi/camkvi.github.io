@@ -22,7 +22,7 @@ button { /* Styles for all buttons */
 
 #myHeader { /* Styles for this specific header*/
     font-size: 4em;
-    color: midnightblue;
+    color: darkred;
     -webkit-text-stroke: 1px white; /* For compatibility with older browsers */
     text-stroke: 1px white; /* Add text outline */
 }
@@ -30,7 +30,7 @@ button { /* Styles for all buttons */
 
 #generateButton { /* Styles for this specific button*/
     font-size: 3em;
-    background-color: darkred;
+    background-color: midnightblue;
     color: white;
     border: none; /* Remove any existing border */
     outline: none; /* Remove any existing outline */
@@ -76,4 +76,5 @@ button { /* Styles for all buttons */
   height: 100%;
   z-index: -1; /* Ensure it's behind other content */
 }
+
 
