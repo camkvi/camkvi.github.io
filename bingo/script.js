@@ -14,9 +14,9 @@ const norwegianPhrases = [
   "Hovedpersonen har et jule-relatert navn", "Misteltein-kyss", "Død forelder", "Kakebaking", "Grønne/røde gensere",
   "Liten by-setting", "By med jule/vinter-navn", "Gammel flamme", "Kræsjer inn i kjærlighetsinteressen", "Kjærlighetstrekant",
   "Hovedpersonen er midlertidig i byen", "Blandet familiemedlem", "Dekorerer juletre sammen", "Julemirakel", "Bedrift på randen av konkurs",
-  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storby-hovedperson", "Kynisk til jul",
+  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storby-hovedperson", "Kynisk om jul",
   "Secret Santa", "Julaften-frist", "Snødd inne", "Skøytescene", "Stygg julegenser-konkurranse",
-  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julemann-opptreden", "Magisk julepynt"
+  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julenissen møter opp", "Magisk julepynt"
 ];
 
 let currentPhrases = englishPhrases; // Start with English phrases
@@ -34,6 +34,7 @@ let currentPhrases = englishPhrases; // Start with English phrases
       const cell = row.insertCell();
       if (i === 2 && j === 2) {
         cell.innerHTML = "Free Space";
+        cell.classList.add("selected"); // Add this line to select the center cell
       } else {
         const phraseIndex = i * 5 + j;
         if (phraseIndex < shuffledPhrases.length) {
