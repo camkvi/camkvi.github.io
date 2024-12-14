@@ -1,16 +1,28 @@
 function generateBoard() {
-  const phrases = [
-    "Lead has christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
-    "Small town setting", "Town with christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
-    "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
-    "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "", "Phrase 20",
-    "Phrase 21", "Phrase 22", "Phrase 23", "Phrase 24", "Phrase 25", 
-    "Phrase 26", "Phrase 27", "Phrase 28", "Phrase 29", "Phrase 30"
-  ]; 
+
+const englishPhrases = [
+  "Lead has Christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
+  "Small town setting", "Town with Christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
+  "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
+  "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "Big city lead", "Cynical about Christmas",
+  "Secret Santa", "Christmas Eve deadline", "Snowed in", "Ice skating scene", "Ugly Christmas sweater contest", 
+  "Charity event", "Town Christmas pageant", "Caroling scene", "Santa Claus appearance", "Magical Christmas ornament" 
+];
+
+const norwegianPhrases = [
+  "Hovedpersonen har et jule-relatert navn", "Misteltein-kyss", "Død forelder", "Kakebaking", "Grønne/røde gensere",
+  "Liten by-setting", "By med jule/vinter-navn", "Gammel flamme", "Kræsjer inn i kjærlighetsinteressen", "Kjærlighetstrekant",
+  "Hovedpersonen er midlertidig i byen", "Blandet familiemedlem", "Dekorerer juletre sammen", "Julemirakel", "Bedrift på randen av konkurs",
+  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storby-hovedperson", "Kynisk til jul",
+  "Secret Santa", "Julaften-frist", "Snødd inne", "Skøytescene", "Stygg julegenser-konkurranse",
+  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julemann-opptreden", "Magisk julepynt"
+];
+
+let currentPhrases = englishPhrases; // Start with English phrases
 
 
   const card = document.getElementById("bingoCard");
-  const shuffledPhrases = shuffleArray(phrases);
+  const shuffledPhrases = shuffleArray(currentPhrases);
 
   // Clear existing board
   card.innerHTML = ""; 
