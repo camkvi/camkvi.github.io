@@ -19,7 +19,7 @@ button { /* Styles for the button */
 #bingoCard td {
   width: 100px;
   height: 100px;
-  border: 1px forest green;
+  border: 1px green;
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
@@ -30,8 +30,9 @@ button { /* Styles for the button */
 #bingoCard td.selected {
   background-color: crimson;
 }
-
+/*
 #bingoCard td:nth-child(3):nth-child(3) { /* Center square */
   background-color: crimson;
   cursor: default;
 }
+*/
