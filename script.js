@@ -10,28 +10,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const card = document.getElementById("bingoCard");
   const shuffledPhrases = shuffleArray(phrases);
 
-  // Generate rows and cells
-  for (let i = 0; i < 5; i++) {
-    const row = card.insertRow();
-    for (let j = 0; j < 5; j++) {
-      const cell = row.insertCell();
-      if (i === 2 && j === 2) {
-        cell.innerHTML = "Free Space";
-      } else {
-        const phraseIndex = i * 5 + j;
-        if (phraseIndex < shuffledPhrases.length) {
-          cell.innerHTML = shuffledPhrases[phraseIndex];
-          if (j !== 2) {  // Make columns except the middle clickable
-            cell.addEventListener("click", function() {
-              this.classList.toggle("selected");
-              checkBingo();
-            });
-          }
-        }
+// Generate rows and cells
+for (let i = 0; i < 5; i++) {
+  const row = card.insertRow();
+  for (let j = 0; j < 5; j++) {
+    const cell = row.insertCell();
+    if (i === 2 && j === 2) {
+      cell.innerHTML = "Free Space";
+    } else {
+      const phraseIndex = i * 5 + j;
+      if (phraseIndex < shuffledPhrases.length) {
+        cell.innerHTML = shuffledPhrases[phraseIndex];
       }
     }
+    // Move the event listener outside the conditional blocks
+    cell.addEventListener("click", function() { 
+      this.classList.toggle("selected");
+      checkBingo();
+    }); 
   }
-});
+}
 
 function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
