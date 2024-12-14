@@ -20,16 +20,7 @@ const norwegianPhrases = [
 
 let currentPhrases = englishPhrases; // Start with English phrases
 
-  const card = document.getElementById("bingoCard");
-  const shuffledPhrases = shuffleArray(currentPhrases);
-
-  // Clear existing board
-  card.innerHTML = ""; 
-
-  // Generate rows and cells
-  for (let i = 0; i < 5; i++) {
-    const row = card.insertRow();
-    for (let j = 0; j < 5; j++) {
+@@ -34,66 +34,67 @@
       const cell = row.insertCell();
       if (i === 2 && j === 2) {
         cell.innerHTML = "Free Space";
@@ -92,4 +83,7 @@ function checkBingo() {
     }
     if (bingo) {
       alert("Bingo!");
-
+      return; // Stop checking after finding a bingo
+    }
+  }
+}

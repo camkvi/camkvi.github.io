@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   flex-direction: column;
@@ -53,7 +54,7 @@ button { /* Styles for all buttons */
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
-  color: white
+  color: white;
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
 }
@@ -78,6 +79,5 @@ button { /* Styles for all buttons */
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2; /* Ensure it's behind other content */
+  z-index: -1; /* Ensure it's behind other content */
 }
-
