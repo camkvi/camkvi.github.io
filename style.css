@@ -1,9 +1,9 @@
-body { /* Puts the header and button in the center, move then with generateBoard() after the board has been generated */
+body {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  justify-content: center; 
   min-height: 100vh; 
+  padding-top: 20vh; /* Add padding to push content down */
 }
 
 h1 { /* Styles for all h1 headers */
@@ -20,13 +20,13 @@ button { /* Styles for all buttons */
 
 
 #myHeader { /* Styles for this specific header*/
-    font-size: 30px;
+    font-size: 60px;
     color: crimson;
 }
 
 
 #generateButton { /* Styles for this specific button*/
-    font-size: 20px;
+    font-size: 40px;
     background-color: green;
     color: white;
 }
