@@ -1,3 +1,14 @@
+h1 { /* Styles for the h1 header */
+  text-align: center;  /* Center the text */
+  font-family: sans-serif; /* Change the font to sans-serif */
+}
+
+button { /* Styles for the button */
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center the button horizontally */
+  font-family: sans-serif; /* Change the font to sans-serif */
+}
+
 #bingoCard {
   width: 500px;
   height: 500px;
@@ -8,7 +19,7 @@
 #bingoCard td {
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  border: 1px forest green;
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
@@ -17,10 +28,10 @@
 }
 
 #bingoCard td.selected {
-  background-color: yellow;
+  background-color: crimson;
 }
 
 #bingoCard td:nth-child(3):nth-child(3) { /* Center square */
-  background-color: lightgray;
+  background-color: crimson;
   cursor: default;
 }
