@@ -47,12 +47,12 @@ const norwegianPhrases = [
       });
     }
   }
-  // After generating the board, move the header and button to the top center:
+  // After generating the board, move the header and buttons to the top center:
   document.getElementById("myHeader").style.position = "relative";
-  document.getElementById("myHeader").style.fontSize = "2em"; // Reset font size 
-  document.getElementById("generateButton").style.position = "relative"; 
+  document.getElementById("myHeader").style.fontSize = "2em"; // Reset font size
+  document.getElementById("generateButton").style.position = "relative";
   document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
-
+  document.getElementById("languageButton").style.position = "relative"; // Add this line
 }
 
 function toggleLanguage() {
@@ -65,7 +65,7 @@ function toggleLanguage() {
   languageButton.classList.toggle("english", isEnglish);
   languageButton.classList.toggle("norwegian", !isEnglish);
 
-  //generateBoard(); // Regenerate the board
+  generateBoard(); // Regenerate the board
 }
 
 function shuffleArray(array) {
