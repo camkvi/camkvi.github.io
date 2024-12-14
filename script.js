@@ -36,9 +36,9 @@ function generateBoard() {
   }
   // After generating the board, move the header and button to the top center:
   document.getElementById("myHeader").style.position = "relative";
-  document.getElementById("myHeader").style.fontSize = 30px; // Reset font size 
+  document.getElementById("myHeader").style.fontSize = "2em"; // Reset font size 
   document.getElementById("generateButton").style.position = "relative"; 
-  document.getElementById("generateButton").style.fontSize = 20px; // Reset font size 
+  document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
 
 }
 

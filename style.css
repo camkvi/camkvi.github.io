@@ -20,13 +20,13 @@ button { /* Styles for all buttons */
 
 
 #myHeader { /* Styles for this specific header*/
-    font-size: 60px;
+    font-size: 3em;
     color: crimson;
 }
 
 
 #generateButton { /* Styles for this specific button*/
-    font-size: 40px;
+    font-size: 2em;
     background-color: green;
     color: white;
 }
