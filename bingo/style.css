@@ -6,9 +6,9 @@ body {
 }
 
 #container {
-  background-image: url("starrySky.jpg"); 
+  background-image: url("starrySky1.jpg") !important; 
   background-size: cover; /* Or 'contain', depending on how you want it to fit */
-  background-repeat: repeat; 
+  background-repeat: no-repeat; 
   /* ... other styles for your container ... */
 }
 
