@@ -22,7 +22,7 @@ button { /* Styles for all buttons */
 
 #myHeader { /* Styles for this specific header*/
     font-size: 4em;
-    color: darkred;
+    color: midnightblue;
     -webkit-text-stroke: 1px white; /* For compatibility with older browsers */
     text-stroke: 1px white; /* Add text outline */
 }
