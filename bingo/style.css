@@ -78,6 +78,6 @@ button { /* Styles for all buttons */
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure it's behind other content */
+  z-index: 2; /* Ensure it's behind other content */
 }
 
