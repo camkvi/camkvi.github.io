@@ -48,7 +48,7 @@ let currentPhrases = englishPhrases; // Start with English phrases
   }
   // After generating the board, move the header and buttons to the top center:
   document.getElementById("myHeader").style.position = "relative";
-  document.getElementById("myHeader").style.fontSize = "2em"; // Reset font size
+  document.getElementById("myHeader").style.fontSize = "3em"; // Reset font size
   document.getElementById("generateButton").style.position = "relative";
   document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
 }
