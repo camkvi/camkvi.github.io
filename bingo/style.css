@@ -22,8 +22,8 @@ button { /* Styles for all buttons */
 
 #myHeader { /* Styles for this specific header*/
     font-size: 3em;
-    color: dark red;
-    text-shadow: 2px 2px 4px white; /* Add text shadow */
+    color: darkred;
+    text-shadow: 2px 2px white; /* Add text shadow */
 }
 
 
@@ -50,19 +50,19 @@ button { /* Styles for all buttons */
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
-  color: white
-    text-shadow: 2px 2px 4px black; /* Add text shadow */
+  color: black
+    text-shadow: 2px 2px white; /* Add text shadow */
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
 }
 
 #bingoCard td.selected {
-  background-color: dark red;
+  background-color: darkred;
   color: white;
 }
 
 #bingoCard tr:nth-child(3) td:nth-child(3) { /* Center square */
-  background-color: dark red;
+  background-color: darkred;
   cursor: default;
 }
 
