@@ -63,10 +63,16 @@ button { /* Styles for all buttons */
   cursor: default;
 }
 
+
 #container {
   background-image: url("starrySky1.jpg") !important; 
-  background-size: cover; /* Or 'contain', depending on how you want it to fit */
+  background-size: cover; 
   background-repeat: no-repeat; 
-  /* ... other styles for your container ... */
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it's behind other content */
 }
 
