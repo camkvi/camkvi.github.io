@@ -53,7 +53,7 @@ button { /* Styles for all buttons */
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
   font-size: 16px;
-  color: white
+  color: white;
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
 }
