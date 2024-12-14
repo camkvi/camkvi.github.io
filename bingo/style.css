@@ -31,6 +31,7 @@ button { /* Styles for all buttons */
     color: white;
 }
 
+/*
 #languageButton { /* Styles for this specific button*/
     font-size: 1em;
     background-color: crimson;
@@ -47,6 +48,7 @@ button { /* Styles for all buttons */
   font-weight: bold;
   color: yellow; 
 }
+*/
 
 #bingoCard {
   width: 90vw;  /* 90% of the viewport width */
