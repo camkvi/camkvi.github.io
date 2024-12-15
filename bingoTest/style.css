@@ -37,6 +37,16 @@ button { /* Styles for all buttons */
     outline: none; /* Remove any existing outline */
 }
 
+#toggleLanguage {
+    position: fixed;
+    top: 2vh;  /* 2% of the viewport height */
+    right: 2vh;
+    background-color: darkred;
+    color: white;
+    border: none; /* Remove any existing border */
+    outline: none; /* Remove any existing outline */
+}
+
 
 #bingoCard {
   width: 90vw;  /* 90% of the viewport width */
