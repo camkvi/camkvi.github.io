@@ -50,6 +50,7 @@ button { /* Styles for all buttons */
     position: fixed;
     top: 9vh;  /* 2% of the viewport height */
     right: 2vw;
+    font-size: 1em;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
