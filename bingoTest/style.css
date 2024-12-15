@@ -57,7 +57,7 @@ button { /* Styles for all buttons */
     outline: none; /* Remove any existing outline */
 }
 
-#number {
+#boardNumber {
     position: fixed;
     top: 12vh;  /* 2% of the viewport height */
     right: 2vw;
