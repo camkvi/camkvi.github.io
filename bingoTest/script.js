@@ -115,11 +115,12 @@ function generateSpecificBoard(boardNumber) {
     return;
   }
 
+  card.innerHTML = ""; // Clear existing board
+
   const seed = boardNumber;
   const rng = new Math.seedrandom(seed);
 
   const card = document.getElementById("bingoCard");
-  card.innerHTML = ""; // Clear existing board
 
   let phraseIndices = [];
   while (phraseIndices.length < 24) {
