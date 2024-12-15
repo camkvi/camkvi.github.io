@@ -2,21 +2,21 @@
 
 
 const englishPhrases = [
-  "Lead has Christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
-  "Small town setting", "Town with Christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
-  "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
-  "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "Big city lead", "Cynical about Christmas",
-  "Secret Santa", "Christmas Eve deadline", "Snowed in", "Ice skating scene", "Ugly Christmas sweater contest", 
-  "Charity event", "Town Christmas pageant", "Caroling scene", "Santa Claus appearance", "Magical Christmas ornament" 
+  "0 Lead has Christmas related name", "1 Mistletoe kiss", "2 Dead parent", "3 Cookie baking", "4 Green/red sweaters",
+  "5 Small town setting", "6 Town with Christmas/winter name", "7 Old flame", "8 Crashes into love interest", "9 Love triangle",
+  "10 Lead is in town temporarily", "11 Meddling family member", "12 Decorate tree together", "13 Christmas miracle", "14 Business about to go bankrupt",
+  "15 Lead decides to stay in town", "16 Career-driven lead woman", "17 Lead goes through break-up", "18 Big city lead", "19 Cynical about Christmas",
+  "20 Secret Santa", "21 Christmas Eve deadline", "22 Snowed in", "23 Ice skating scene", "24 Ugly Christmas sweater contest", 
+  "25 Charity event", "26 Town Christmas pageant", "27 Caroling scene", "28 Santa Claus appearance", "29 Magical Christmas ornament" 
 ];
 
 const norwegianPhrases = [
-  "Hovedpersonen har et jule-relatert navn", "Misteltein-kyss", "Død forelder", "Kakebaking", "Grønne/røde gensere",
-  "Liten by-setting", "By med jule/vinter-navn", "Gammel flamme", "Kræsjer inn i kjærlighetsinteressen", "Kjærlighetstrekant",
-  "Hovedpersonen er midlertidig i byen", "Blandet familiemedlem", "Dekorerer juletre sammen", "Julemirakel", "Bedrift på randen av konkurs",
-  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storby-hovedperson", "Kynisk om jul",
-  "Secret Santa", "Julaften-frist", "Snødd inne", "Skøytescene", "Stygg julegenser-konkurranse",
-  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julenissen møter opp", "Magisk julepynt"
+  "0 Hovedpersonen har et jule-relatert navn", "1 Misteltein-kyss", "2 Død forelder", "3 Kakebaking", "4 Grønne/røde gensere",
+  "5 Liten by-setting", "6 By med jule/vinter-navn", "7 Gammel flamme", "8 Kræsjer inn i kjærlighetsinteressen", "9 Kjærlighetstrekant",
+  "10 Hovedpersonen er midlertidig i byen", "11 Blandet familiemedlem", "12 Dekorerer juletre sammen", "13 Julemirakel", "14 Bedrift på randen av konkurs",
+  "15 Hovedpersonen bestemmer seg for å bli i byen", "16 Karrieredrevet kvinnelig hovedperson", "17 Hovedpersonen går gjennom et brudd", "18 Storby-hovedperson", "19 Kynisk om jul",
+  "20 Secret Santa", "21 Julaften-frist", "22 Snødd inne", "23 Skøytescene", "24 Stygg julegenser-konkurranse",
+  "25 Veldedighetsarrangement", "26 Juleforestilling i byen", "27 Julekor-scene", "28 Julenissen møter opp", "29 Magisk julepynt"
 ];
 
 let currentPhrases = englishPhrases; // Start with English phrases
