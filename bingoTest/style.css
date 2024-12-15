@@ -40,7 +40,7 @@ button { /* Styles for all buttons */
 #toggleLanguage {
     position: fixed;
     top: 2vh;  /* 2% of the viewport height */
-    right: 2vh;
+    right: 2vw;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
