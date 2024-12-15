@@ -48,7 +48,7 @@ button { /* Styles for all buttons */
 
 #boardNumberSelect {
     position: fixed;
-    top: 7vh;  /* 2% of the viewport height */
+    top: 9vh;  /* 2% of the viewport height */
     right: 2vw;
     background-color: darkred;
     color: white;
@@ -58,8 +58,8 @@ button { /* Styles for all buttons */
 
 
 #bingoCard {
-  width: 90vw;  /* 90% of the viewport width */
-  height: 90vw; /* Same as width to maintain square aspect ratio */
+  width: 100vw;  /* 90% of the viewport width */
+  height: 100vw; /* Same as width to maintain square aspect ratio */
   max-width: 500px; /* Limit the maximum width to 500px */
   max-height: 500px; /* Limit the maximum height to 500px */
   border-collapse: collapse;
