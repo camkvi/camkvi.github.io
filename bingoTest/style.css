@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+}
+
+
+h1 { /* Styles for all h1 headers */
+  text-align: center;  /* Center the text */
+  font-family: sans-serif; /* Change the font to sans-serif */
+  margin-top: 20vh; /* Add margin-top to the header */
+}
+
+
+button { /* Styles for all buttons */
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center the button horizontally */
+  font-family: sans-serif; /* Change the font to sans-serif */
+}
+
+
+#myHeader { /* Styles for this specific header*/
+    font-size: 4em;
+    color: darkred;
+    -webkit-text-stroke: 1px white; /* For compatibility with older browsers */
+    text-stroke: 1px white; /* Add text outline */
+}
+
+
+#generateButton { /* Styles for this specific button*/
+    font-size: 3em;
+    background-color: darkred;
+    color: white;
+    border: none; /* Remove any existing border */
+    outline: none; /* Remove any existing outline */
+}
+
+
+#bingoCard {
+  width: 90vw;  /* 90% of the viewport width */
+  height: 90vw; /* Same as width to maintain square aspect ratio */
+  max-width: 500px; /* Limit the maximum width to 500px */
+  max-height: 500px; /* Limit the maximum height to 500px */
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+#bingoCard td {
+  width: 20%;
+  height: 20%;
+  border: 1px solid gold;
+  text-align: center; /* Center text horizontally */
+  vertical-align: middle;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif; /* Use a sans-serif font */
+}
+
+#bingoCard td.selected {
+  background-color: darkred;
+  color: white;
+}
+
+
+
+#container {
+  background-image: url("starrySky1.jpg") !important; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it's behind other content */
+}
+
+
