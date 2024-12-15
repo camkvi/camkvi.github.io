@@ -1,5 +1,5 @@
                                                   // TEST VERSION
-function generateBoard() {
+
 
 const englishPhrases = [
   "Lead has Christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
@@ -20,6 +20,9 @@ const norwegianPhrases = [
 ];
 
 let currentPhrases = englishPhrases; // Start with English phrases
+
+
+function generateBoard() {
 
   const card = document.getElementById("bingoCard");
   const shuffledPhrases = shuffleArray(currentPhrases);
@@ -96,4 +99,10 @@ function checkBingo() {
       return; // Stop checking after finding a bingo
     }
   }
+}
+
+
+function toggleLanguage() {
+    currentPhrases = (currentPhrases == englishPhrases) ? norwegianPhrases : englishPhrases;
+    generateBoard();
 }
