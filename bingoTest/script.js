@@ -104,5 +104,4 @@ function checkBingo() {
 
 function toggleLanguage() {
     currentPhrases = (currentPhrases == englishPhrases) ? norwegianPhrases : englishPhrases;
-    generateBoard();
 }
