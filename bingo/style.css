@@ -66,13 +66,14 @@ button { /* Styles for all buttons */
   margin: 20px auto;
 }
 
+
 #bingoCard td {
   width: 20%;
   height: 20%;
   border: 1px solid gold;
   text-align: center; /* Center text horizontally */
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   cursor: pointer;
   font-family: sans-serif; /* Use a sans-serif font */
@@ -81,6 +82,12 @@ button { /* Styles for all buttons */
 #bingoCard td.selected {
   background-color: darkred;
   color: white;
+}
+
+@media (max-width: 480px) { 
+  #bingoCard td {
+    font-size: 10px; /* Even smaller font size for very small screens */
+  }
 }
 
 
