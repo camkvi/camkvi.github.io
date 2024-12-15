@@ -106,3 +106,45 @@ function toggleLanguage() {
     currentPhrases = (currentPhrases == englishPhrases) ? norwegianPhrases : englishPhrases;
     generateBoard();
 }
+
+
+
+function generateSpecificBoard(boardNumber) {
+  if (boardNumber < 1 || boardNumber > 50) {
+    alert("Invalid board number. Please enter a number between 1 and 50.");
+    return;
+  }
+
+  const seed = boardNumber;
+  const rng = new Math.seedrandom(seed);
+
+  const card = document.getElementById("bingoCard");
+  card.innerHTML = ""; // Clear existing board
+
+  let phraseIndices = [];
+  while (phraseIndices.length < 24) {
+    let index = Math.floor(rng() * currentPhrases.length);
+    if (!phraseIndices.includes(index)) {
+      phraseIndices.push(index);
+    }
+  }
+
+  // Generate rows and cells
+  let index = 0;
+  for (let i = 0; i < 5; i++) {
+    const row = card.insertRow();
+    for (let j = 0; j < 5; j++) {
+      const cell = row.insertCell();
+      if (i === 2 && j === 2) {
+        cell.innerHTML = "Free Space";
+        cell.classList.add("selected");
+      } else {
+        cell.innerHTML = currentPhrases[phraseIndices[index++]];
+        cell.addEventListener("click", function() {
+          this.classList.toggle("selected");
+          checkBingo();
+        });
+      }
+    }
+  }
+}

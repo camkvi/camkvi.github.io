@@ -47,6 +47,16 @@ button { /* Styles for all buttons */
     outline: none; /* Remove any existing outline */
 }
 
+#boardNumberButton {
+    position: fixed;
+    top: 7vh;  /* 2% of the viewport height */
+    right: 2vw;
+    background-color: darkred;
+    color: white;
+    border: none; /* Remove any existing border */
+    outline: none; /* Remove any existing outline */
+}
+
 
 #bingoCard {
   width: 90vw;  /* 90% of the viewport width */
