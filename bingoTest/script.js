@@ -1,72 +1,96 @@
-                                                  // TEST VERSION
+                                                				  // TEST VERSION
 
 
+										// PHRASES
 const englishPhrases = [
-  "0 Lead has Christmas related name", "1 Mistletoe kiss", "2 Dead parent", "3 Cookie baking", "4 Green/red sweaters",
-  "5 Small town setting", "6 Town with Christmas/winter name", "7 Old flame", "8 Crashes into love interest", "9 Love triangle",
-  "10 Lead is in town temporarily", "11 Meddling family member", "12 Decorate tree together", "13 Christmas miracle", "14 Business about to go bankrupt",
-  "15 Lead decides to stay in town", "16 Career-driven lead woman", "17 Lead goes through break-up", "18 Big city lead", "19 Cynical about Christmas",
-  "20 Secret Santa", "21 Christmas Eve deadline", "22 Snowed in", "23 Ice skating scene", "24 Ugly Christmas sweater contest", 
-  "25 Charity event", "26 Town Christmas pageant", "27 Caroling scene", "28 Santa Claus appearance", "29 Magical Christmas ornament" 
+  "Lead has Christmas related name", "Mistletoe kiss", "Dead parent", "Cookie baking", "Green/red sweaters",
+  "Small town setting", "Town with Christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
+  "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
+  "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "Big city lead", "Cynical about Christmas",
+  "Secret Santa", "Christmas Eve deadline", "Snowed in", "Ice skating scene", "Ugly Christmas sweater contest", 
+  "Charity event", "Town Christmas pageant", "Caroling scene", "Santa Claus appearance", "Magical Christmas ornament" 
 ];
 
 const norwegianPhrases = [
-  "0 Hovedpersonen har et jule-relatert navn", "1 Misteltein-kyss", "2 Død forelder", "3 Kakebaking", "4 Grønne/røde gensere",
-  "5 Liten by-setting", "6 By med jule/vinter-navn", "7 Gammel flamme", "8 Kræsjer inn i kjærlighetsinteressen", "9 Kjærlighetstrekant",
-  "10 Hovedpersonen er midlertidig i byen", "11 Blandet familiemedlem", "12 Dekorerer juletre sammen", "13 Julemirakel", "14 Bedrift på randen av konkurs",
-  "15 Hovedpersonen bestemmer seg for å bli i byen", "16 Karrieredrevet kvinnelig hovedperson", "17 Hovedpersonen går gjennom et brudd", "18 Storby-hovedperson", "19 Kynisk om jul",
-  "20 Secret Santa", "21 Julaften-frist", "22 Snødd inne", "23 Skøytescene", "24 Stygg julegenser-konkurranse",
-  "25 Veldedighetsarrangement", "26 Juleforestilling i byen", "27 Julekor-scene", "28 Julenissen møter opp", "29 Magisk julepynt"
+  "Hovedpersonen har et julete navn", "Misteltein-kyss", "Død forelder", "Kakebaking", "Grønne/røde gensere",
+  "Liten by", "By med jule-/vinternavn", "Gammel flamme", "Kræsjer inn i den utkårede", "Kjærlighetstrekant",
+  "Hovedpersonen er midlertidig i byen", "Innblandende familiemedlem", "Pynter juletreet sammen", "Julemirakel", "Bedrift på konkursens rand",
+  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storbymenneske", "Kynisk til jul",
+  "Hemmelig nissevenn", "Frist på julaften", "Snødd inne", "Skøytescene", "Konkurranse om stygg julegenser",
+  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julemannen dukker opp", "Magisk julekule"
 ];
 
 let currentPhrases = englishPhrases; // Start with English phrases
+let phraseIndices = []; // Store the generated phrase indices, global variable
 
-
+										// GENERATE RANDOM BOARD
 function generateBoard() {
+  const rng = new Math.seedrandom(); // Use a random seed for generateBoard()
+  const phraseIndices = generatePhraseIndices(rng); // Generate indices
+  createBoard(phraseIndices); // Create the board with the indices
+}
 
+										// GENERATE SPECIFIC BOARD
+function generateSpecificBoard(boardNumber) {
+  if (boardNumber < 1 || boardNumber > 50) {
+    alert("Invalid board number. Please enter a number between 1 and 50.");
+    return;
+  }
+
+  const rng = new Math.seedrandom(boardNumber);
+  const phraseIndices = generatePhraseIndices(rng);
+  createBoard(phraseIndices);
+}
+
+
+										// FUNCTION TO GENERATE PHRASE INDICES 
+function generatePhraseIndices(rng) {
+  let phraseIndices = [];
+  while (phraseIndices.length < 24) {
+    let index = Math.floor(rng() * currentPhrases.length);
+    if (!phraseIndices.includes(index)) {
+      phraseIndices.push(index);
+    }
+  }
+  return phraseIndices;
+}
+
+										// FUNCTION TO CREATE THE BOARD WITH GIVEN PHRASE INDICES
+function createBoard(phraseIndices) {
   const card = document.getElementById("bingoCard");
-  const shuffledPhrases = shuffleArray(currentPhrases);
 
-  // Clear existing board
-  card.innerHTML = ""; 
+  // Clear the table contents
+  while (card.firstChild) {
+    card.removeChild(card.firstChild);
+  }
 
   // Generate rows and cells
-  for (let i = 0; i < 5; i++) {
+  let index = 0;
+  for (let i = 0; i < 5; i++) {		// create 5 rows
     const row = card.insertRow();
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < 5; j++) {	// create 5 columns, add phrases
       const cell = row.insertCell();
       if (i === 2 && j === 2) {
         cell.innerHTML = "Free Space";
-        cell.classList.add("selected"); // Add this line to select the center cell
+        cell.classList.add("selected");		// select the free space from the start
       } else {
-        const phraseIndex = i * 5 + j;
-        if (phraseIndex < shuffledPhrases.length) {
-          cell.innerHTML = shuffledPhrases[phraseIndex];
-        }
-      }
-      cell.addEventListener("click", function() {
-        this.classList.toggle("selected");
-        checkBingo();
-      });
+        cell.innerHTML = currentPhrases[phraseIndices[index++]];	// add next phrase in phraseIndices
+      }  
+      cell.addEventListener("click", function() {			// check for bingo every time a cell is selected
+          this.classList.toggle("selected");
+          checkBingo();
+        });
     }
   }
+
   // After generating the board, move the header and buttons to the top center:
   document.getElementById("myHeader").style.position = "relative";
   document.getElementById("myHeader").style.fontSize = "3em"; // Reset font size
   document.getElementById("generateButton").style.position = "relative";
   document.getElementById("generateButton").style.fontSize = "1.2em"; // Reset font size
-}
+} 
 
-function shuffleArray(array) {
-  // Fisher-Yates shuffle algorithm
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-function checkBingo() {
+function checkBingo() {								// CHECK FOR BINGO	
   const card = document.getElementById("bingoCard");
   const cells = card.getElementsByTagName("td"); 
 
@@ -102,49 +126,26 @@ function checkBingo() {
 }
 
 
-function toggleLanguage() {
-    currentPhrases = (currentPhrases == englishPhrases) ? norwegianPhrases : englishPhrases;
-    generateBoard();
-}
-
-
-
-function generateSpecificBoard(boardNumber) {
-  if (boardNumber < 1 || boardNumber > 50) {
-    alert("Invalid board number. Please enter a number between 1 and 50.");
-    return;
-  }
-
-  const seed = boardNumber;
-  const rng = new Math.seedrandom(seed);
+function toggleLanguage() {  
+  currentPhrases = (currentPhrases === englishPhrases) ? norwegianPhrases : englishPhrases;
 
   const card = document.getElementById("bingoCard");
-  location.reload(); // Force page reload
+  const cells = card.getElementsByTagName("td");
 
-  let phraseIndices = [];
-  while (phraseIndices.length < 24) {
-    let index = Math.floor(rng() * currentPhrases.length);
-    if (!phraseIndices.includes(index)) {
-      phraseIndices.push(index);
+  for (let i = 0; i < cells.length; i++) {
+    if (cells[i].innerHTML === "Free Space") continue; // Skip Free Space
+
+    // Find the corresponding phrase index by matching content in the old phrases
+    const currentPhrase = cells[i].innerHTML;
+    let index = englishPhrases.indexOf(currentPhrase);
+    if (index === -1) {
+      index = norwegianPhrases.indexOf(currentPhrase); // If not in English, check Norwegian
     }
-  }
 
-  // Generate rows and cells
-  let index = 0;
-  for (let i = 0; i < 5; i++) {
-    const row = card.insertRow();
-    for (let j = 0; j < 5; j++) {
-      const cell = row.insertCell();
-      if (i === 2 && j === 2) {
-        cell.innerHTML = "Free Space";
-        cell.classList.add("selected");
-      } else {
-        cell.innerHTML = currentPhrases[phraseIndices[index++]];
-        cell.addEventListener("click", function() {
-          this.classList.toggle("selected");
-          checkBingo();
-        });
-      }
+    // Update the cell content using the new phrases
+    if (index !== -1) {
+      cells[i].innerHTML = currentPhrases[index];
     }
   }
 }
+

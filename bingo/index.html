@@ -4,7 +4,8 @@
 <title>Hoho</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script> <! includes the seedrandom library >
+<meta charset="UTF-8"> 		<! use the UTF-8 character encoding, which includes øæå >
 </head>
 <body>
 
@@ -12,10 +13,25 @@
 
   <h1 id="myHeader">Bad Christmas Movie Bingo</h1>
 
-  <button id="generateButton" onclick="generateBoard()">Generate New Board</button>
+  <button id="generateButton" onclick="generateBoard()">Generate Random Board</button>
+
+  <button id="toggleLanguage" onclick="toggleLanguage()">ENG / NO</button>
+
+  <select id="boardNumberSelect" onchange="generateSpecificBoard(this.value)">
+    <option value="">Generate specific board</option> 
+    <script>
+      for (let i = 1; i <= 50; i++) {
+        document.write(`<option value="${i}">${i}</option>`);
+      }
+    </script>
+  </select>
+
+
+
 
   <table id="bingoCard"></table>
 
   <script src="script.js"></script>
 </body>
 </html>
+

@@ -29,7 +29,27 @@ button { /* Styles for all buttons */
 
 
 #generateButton { /* Styles for this specific button*/
-    font-size: 3em;
+    font-size: 2em;
+    background-color: darkred;
+    color: white;
+    border: none; /* Remove any existing border */
+    outline: none; /* Remove any existing outline */
+}
+
+#toggleLanguage {
+    position: fixed;
+    top: 2vh;  /* 2% of the viewport height */
+    right: 2vw;
+    background-color: darkred;
+    color: white;
+    border: none; /* Remove any existing border */
+    outline: none; /* Remove any existing outline */
+}
+
+#boardNumberSelect {
+    position: fixed;
+    top: 7vh;  /* 2% of the viewport height */
+    right: 2vw;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
@@ -76,5 +96,6 @@ button { /* Styles for all buttons */
   height: 100%;
   z-index: -1; /* Ensure it's behind other content */
 }
+
 
 
