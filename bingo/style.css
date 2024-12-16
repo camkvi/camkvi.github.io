@@ -9,7 +9,7 @@ body {
 h1 { /* Styles for all h1 headers */
   text-align: center;  /* Center the text */
   font-family: sans-serif; /* Change the font to sans-serif */
-  margin-top: 20vh; /* Add margin-top to the header */
+  margin-top: 10vh; /* Add margin-top to the header */
 }
 
 
