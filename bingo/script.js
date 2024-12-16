@@ -4,17 +4,21 @@ const englishPhrases = [
   "Small town setting", "Town with Christmas/winter name", "Old flame", "Crashes into love interest", "Love triangle",
   "Lead is in town temporarily", "Meddling family member", "Decorate tree together", "Christmas miracle", "Business about to go bankrupt",
   "Lead decides to stay in town", "Career-driven lead woman", "Lead goes through break-up", "Big city lead", "Cynical about Christmas",
-  "Secret Santa", "Christmas Eve deadline", "Snowed in", "Ice skating scene", "Ugly Christmas sweater contest", 
-  "Charity event", "Town Christmas pageant", "Caroling scene", "Santa Claus appearance", "Magical Christmas ornament" 
+  "Secret Santa", "Christmas Eve deadline", "Snowed in", "Ice skating scene", "Amnesia", 
+  "Charity event", "Precocious child", "Caroling scene", "Santa Claus appearance", "Magical Christmas ornament",
+  "First snow of the season", "Big misunderstanding", "Hot cocoa", "Lead is widowed", "Lead is a single parent",
+  "Childhood friends", "Diner scene", "Love at first sight", "Dislike at first sight", "Clumsy"
 ];
 
 const norwegianPhrases = [
-  "Hovedpersonen har et julete navn", "Misteltein-kyss", "Død forelder", "Kakebaking", "Grønne/røde gensere",
-  "Liten by", "By med jule-/vinternavn", "Gammel flamme", "Kræsjer inn i den utkårede", "Kjærlighetstrekant",
-  "Hovedpersonen er midlertidig i byen", "Innblandende familiemedlem", "Pynter juletreet sammen", "Julemirakel", "Bedrift på konkursens rand",
-  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Storbymenneske", "Kynisk til jul",
-  "Hemmelig nissevenn", "Frist på julaften", "Snødd inne", "Skøytescene", "Konkurranse om stygg julegenser",
-  "Veldedighetsarrangement", "Juleforestilling i byen", "Julekor-scene", "Julemannen dukker opp", "Magisk julekule"
+  "Hovedpersonen har et julete navn", "Kyss under Misteltein", "Død forelder", "Julekakebaking", "Grønne/røde gensere",
+  "Handling satt til liten by", "By med jule-/vinternavn", "Gammel flamme", "Kræsjer inn i den utkårede", "Love triangle",
+  "Hovedpersonen er midlertidig i byen", "Innblanding fra familiemedlem", "Pynter juletreet sammen", "Julemirakel", "Bedrift på randen av konkurs ",
+  "Hovedpersonen bestemmer seg for å bli i byen", "Karrieredrevet kvinnelig hovedperson", "Hovedpersonen går gjennom et brudd", "Hovedperson er storbymenneske", "Kynisk syn på julen",
+  "Secret santa", "Frist på julaften", "Snødd inne", "Skøytescene", "Hukommelsestap",
+  "Veldedighets- arrangement", "Veslevoksent barn", "Julekor-scene", "Julenissen dukker opp", "Magisk julepynt",
+  "Vinterens første snø", "Stor misforståelse", "Varm kakao", "Hovedperson er enke/ enkemann", "Hovenperson er aleneforelder", 
+  "Barndomsvenner", "Scene på en diner", "Kjærlinget ved første blikk", "Forakt ved første blikk", "Klumsete"
 ];
 
 let currentPhrases = englishPhrases; // Start with English phrases
