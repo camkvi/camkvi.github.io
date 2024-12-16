@@ -18,6 +18,8 @@ button { /* Styles for all buttons */
   margin: 0 auto; /* Center the button horizontally */
   font-family: sans-serif; /* Change the font to sans-serif */
   border-radius: 5px;
+  text-align: center; /* Center the text within the buttons */
+
 }
 
 
@@ -61,6 +63,8 @@ button { /* Styles for all buttons */
     color: white;
     border: none; /* Remove any existing border */
     outline: none; /* Remove any existing outline */
+    text-align: center; /* Center the text within the buttons */
+
 }
 
 
@@ -113,23 +117,32 @@ button { /* Styles for all buttons */
 }
 
 
-@media (max-width: 768px) {
-    #generateButton, #toggleLanguage, #boardNumberSelect {
-        position: static; /* Remove fixed positioning */
-        display: block;   /* Stack buttons vertically */
-        margin: 1vh auto; /* Add spacing and center them */
-        text-align: center;
-        font-size: 1.2em; /* Slightly increase font size for touchscreens */
-    }
+/* Mobile Adjustments */
+@media (max-width: 1500px) { /* breakpoint */
+  #myHeader {font-size: 40px;}  
 
-    #generateButton {
-        margin-top: 5vh; /* Add space at the top */
-    }
+  #toggleLanguage, #generateButton, #boardNumberSelect {
+    position: fixed;
+    font-size: 12px;
+    top: 2vh;
+    margin-right: 2vw; /* Add some space between buttons */
+    text-align: center; /* Center the text within the buttons */
+  }
 
-    #boardNumberSelect {
-        margin-bottom: 5vh; /* Add space at the bottom */
-    }
+  #toggleLanguage {
+    right: 2vw; 
+  }
+
+  #boardNumberSelect {
+    left: 2vw; /* Position from the right edge */
+    top: 5vh;
+  }
+
+  #generateButton {
+    left: 2vw;        /* Position in the center */
+  }
 }
+
 
 
 
