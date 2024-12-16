@@ -48,8 +48,8 @@ button { /* Styles for all buttons */
 
 #boardNumberSelect {
     position: fixed;
-    top: 9vh;  /* 2% of the viewport height */
-    right: 2vw;
+    top: 2vh;  /* 2% of the viewport height */
+    left: 80vw;
     font-size: 1em;
     background-color: darkred;
     color: white;

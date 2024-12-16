@@ -89,8 +89,8 @@ document.getElementById("myHeader").style.position = "relative";
 document.getElementById("myHeader").style.fontSize = "3em"; 
 
 document.getElementById("generateButton").style.position = "fixed"; // Change to fixed
-document.getElementById("generateButton").style.top = "16vh"; // Add top position
-document.getElementById("generateButton").style.right = "2vw"; // Add right position
+document.getElementById("generateButton").style.top = "7vh"; // Add top position
+document.getElementById("generateButton").style.left = "80vw"; // Add right position
 document.getElementById("generateButton").style.fontSize = "1em";
 } 
 
