@@ -83,15 +83,6 @@ function createBoard(phraseIndices) {
         });
     }
   }
-
-// After generating the board, move the header and buttons to the top center:
-document.getElementById("myHeader").style.position = "relative";
-document.getElementById("myHeader").style.fontSize = "3em"; 
-
-document.getElementById("generateButton").style.position = "fixed"; // Change to fixed
-document.getElementById("generateButton").style.top = "7vh"; // Add top position
-document.getElementById("generateButton").style.left = "80vw"; // Add right position
-document.getElementById("generateButton").style.fontSize = "1em";
 } 
 
 function checkBingo() {								// CHECK FOR BINGO	
@@ -152,3 +143,12 @@ function toggleLanguage() {
     }
   }
 }
+
+
+// ... your existing JavaScript code ...
+
+// Call generateBoard() when the page loads
+window.onload = function() {
+  generateBoard(); 
+};
+

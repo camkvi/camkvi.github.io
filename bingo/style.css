@@ -17,6 +17,7 @@ button { /* Styles for all buttons */
   display: block; /* Make the button a block-level element */
   margin: 0 auto; /* Center the button horizontally */
   font-family: sans-serif; /* Change the font to sans-serif */
+  border-radius: 5px;
 }
 
 
@@ -28,18 +29,22 @@ button { /* Styles for all buttons */
 }
 
 
-#generateButton { /* Styles for this specific button*/
-    font-size: 2em;
+#toggleLanguage {
+    position: fixed;
+    top: 2vh;  /* 2% of the viewport height */
+    right: 2vw;
+    font-size: 1em;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
     outline: none; /* Remove any existing outline */
 }
 
-#toggleLanguage {
+#generateButton { /* Styles for this specific button*/
     position: fixed;
     top: 2vh;  /* 2% of the viewport height */
-    right: 2vw;
+    left: 80vw;
+    font-size: 1em;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
@@ -48,9 +53,10 @@ button { /* Styles for all buttons */
 
 #boardNumberSelect {
     position: fixed;
-    top: 2vh;  /* 2% of the viewport height */
+    top: 7vh;  /* 2% of the viewport height */
     left: 80vw;
     font-size: 1em;
+    border-radius: 5px;
     background-color: darkred;
     color: white;
     border: none; /* Remove any existing border */
@@ -85,14 +91,6 @@ button { /* Styles for all buttons */
   color: white;
 }
 
-@media (max-width: 480px) { 
-  #bingoCard td {
-    font-size: 10px; /* Even smaller font size for very small screens */
-  }
-}
-
-
-
 #container {
   background-image: url("starrySky1.jpg") !important; 
   background-size: cover; 
@@ -104,6 +102,39 @@ button { /* Styles for all buttons */
   height: 100%;
   z-index: -1; /* Ensure it's behind other content */
 }
+	
+
+
+									/* CHANGES FOR PHONE SCREENS */
+@media (max-width: 480px) { 
+  #bingoCard td {
+    font-size: 10px; /* Even smaller font size for very small screens */
+  }
+}
+
+
+@media (max-width: 768px) {
+    #generateButton, #toggleLanguage, #boardNumberSelect {
+        position: static; /* Remove fixed positioning */
+        display: block;   /* Stack buttons vertically */
+        margin: 1vh auto; /* Add spacing and center them */
+        text-align: center;
+        font-size: 1.2em; /* Slightly increase font size for touchscreens */
+    }
+
+    #generateButton {
+        margin-top: 5vh; /* Add space at the top */
+    }
+
+    #boardNumberSelect {
+        margin-bottom: 5vh; /* Add space at the bottom */
+    }
+}
+
+
+
+
+
 
 
 
