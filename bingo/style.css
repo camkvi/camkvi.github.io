@@ -124,7 +124,7 @@ button { /* Styles for all buttons */
   #toggleLanguage, #generateButton, #boardNumberSelect {
     position: fixed;
     font-size: 12px;
-    top: 2vh;
+    top: 10px;
     margin-right: 2vw; /* Add some space between buttons */
     text-align: center; /* Center the text within the buttons */
   }
@@ -135,7 +135,7 @@ button { /* Styles for all buttons */
 
   #boardNumberSelect {
     left: 2vw; /* Position from the right edge */
-    top: 5vh;
+    top: 30px;
   }
 
   #generateButton {
